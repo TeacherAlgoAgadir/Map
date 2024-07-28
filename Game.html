@@ -8,10 +8,14 @@
 </head>
 
 <body>
-    <main>
-        <div>
-            <embed class="map" type="image/svg+xml" src="world-map.svg" >
+        <div class="left">
+            <embed id="map" type="image/svg+xml" src="world-map.svg" >
+            <div id="counter">
+                <embed type="image/svg+xml" src="timer.svg">
+                <p id="time"></p>
+            </div>
         </div>
+        
         <div class="options">
             <button class="b"></button>
             <button class="b"></button>
@@ -19,9 +23,7 @@
             <button class="b"></button>
         </div>
         <div class="timer">
-            <img src="timer.svg">
         </div>
-    </main>
     <script src="Logic.js">
 
     </script>

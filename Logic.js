@@ -72,7 +72,6 @@ let countries = [
     ["hu","Hungary"],
     ["id","Indonesia"],
     ["ie","Ireland"],
-    ["il","Israel"],
     ["in","India"],
     ["iq","Iraq"],
     ["ir","Iran"],
@@ -176,16 +175,49 @@ let countries = [
     ["zw","Zimbabwe"],
 ];
 
+let randArray = [];
+
+function ArrayRandomizer (){
+    for ( i=0 ; i < 4 ; i++){  
+        let num1 = Math.floor(Math.random() * countries.length);
+        randArray.push(countries[num1]);
+    }    
+};
+
+function countryPicker(){
+    let num2 = Math.floor(Math.random() * 4);
+    randArray[num2];
+    let map = document.getElementById('ma');
+    };
 
 function display (){
     for ( i=0 ; i < 4 ; i++){  
-        let num = Math.floor(Math.random() * countries.length);
-        let quest =  ;
         let button = document.getElementsByClassName("b");
-        button[i].textContent = countries[num][1];
-        console.log(button[i])
+        button[i].textContent = randArray[i][1];
     }
-
 };
 
+ArrayRandomizer ()
+
+countryPicker()
+
 display();
+
+
+function timer() {
+    let total = 1;
+    let time = document.getElementById("time");
+
+    setInterval(function() {
+        let minutes = Math.floor(total / 60);
+        let seconds = total % 60;
+        if (minutes > 0) {
+            time.innerHTML = minutes + "m " + seconds + "s";
+        } else {
+            time.innerHTML = seconds + "s";
+        }
+        total++;
+    }, 1000);
+}
+
+timer ()
