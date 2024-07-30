@@ -181,14 +181,15 @@ function ArrayRandomizer (){
     for ( i=0 ; i < 4 ; i++){  
         let num1 = Math.floor(Math.random() * countries.length);
         randArray.push(countries[num1]);
-    }    
+    }
+
 };
 
-function countryPicker(){
+function correctPicker(){
     let num2 = Math.floor(Math.random() * 4);
-    randArray[num2];
-    let map = document.getElementById('ma');
-    };
+    let correct = randArray[num2][0];
+    console.log(correct);
+};
 
 function display (){
     for ( i=0 ; i < 4 ; i++){  
@@ -196,12 +197,6 @@ function display (){
         button[i].textContent = randArray[i][1];
     }
 };
-
-ArrayRandomizer ()
-
-countryPicker()
-
-display();
 
 
 function timer() {
@@ -220,4 +215,11 @@ function timer() {
     }, 1000);
 }
 
-timer ()
+
+ArrayRandomizer ();
+
+correctPicker();
+
+display();
+
+timer();
